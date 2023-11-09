@@ -1,0 +1,60 @@
+1) Define qué es un framework
+
+un framework es un marco o esquema de trabajo generalmente utilizado por programadores para realizar el desarrollo de software. Utilizar un framework permite agilizar los procesos de desarrollo ya que evita tener que escribir código de forma repetitiva, asegura unas buenas prácticas y la consistencia del código.
+
+2 )¿Como creamos un proyecto con Angular desde la terminal?
+
+1) instalar nodeJs y npm
+2)Instalar Angular CLI ( npm install -g @angular/cli)
+3)ng new mi-proyecto-angular
+4)abrimos vsc usando code .
+5)ng serve -o
+6)instalamos bootstrap si lo necesitamos npn install bootstrap
+
+3)¿Como creamos un componente con Angular desde la terminal?
+
+Es una clase con el decorador NgModule. Un módulo sirve para organizar en bloques las
+“piezas” de nuestra aplicación.
+
+ng generate component "nombre del componente sin comillas"
+ejemplo >ng generate component terminales
+ejemplo usados en clase > ng generate component components/navbar
+
+para visualizarlo debemos 
+
+navbar.component.html >> pegamos codigo, puede ser de boostrap
+
+y en 
+
+app.component.html >>  <app-navbar></app-navbar> (este nombre lo podemos ver en navbar.componet.ts.)
+Digamos que lo llamamos desde este html pero no pegamos codigo para hacerlo mas ordenado y modular
+solo colocamos los selectores
+
+Ahora si vamos al app.module.ts podemos ver como los componentes que creamos
+ya están importados automáticamente
+
+ejemplo import { NavbarComponent } from './components/navbar/navbar.component';
+
+
+
+4) Describir los pasos para iniciar un proyecto utilizando Git y cómo se procede desde la creación del repositorio local hasta la subida del código a GitHub
+para seguir con este ejemplo
+instalamos Git Bash podemos dirigirnos a la carpeta del proyecto desde windows (Git Bash here) o terminal
+nos vamos a github para tenerlo remoto (https://github.com/)
+
+ejemplo
+new repository
+	(nombre)angular-test
+			public(para poder agregar colaboradores o compartirlo)
+
+	echo "# angular-test" >> README.md
+	git init
+	git add README.md (lo podemos saltear)
+	git commit -m "Primer commit"
+	git branch -M main
+	git remote add origin https://github.com/horacio2020/angular-test.git
+	git push -u origin main
+
+
+
+
